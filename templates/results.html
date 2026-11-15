@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        Reconciliation Results
+    </title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+
+            display: flex;
+            justify-content: center;
+
+            margin-top: 50px;
+        }
+
+        .container {
+
+            width: 700px;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0px 0px 10px
+            rgba(0,0,0,0.2);
+        }
+
+        h1 {
+
+            text-align: center;
+            color: #1f4e79;
+        }
+
+        table {
+
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+
+            border: 1px solid #ddd;
+        }
+
+        th {
+
+            background-color: #1f4e79;
+            color: white;
+        }
+
+        th,
+        td {
+
+            padding: 12px;
+            text-align: center;
+        }
+
+        .download-btn {
+
+            margin-top: 20px;
+
+            display: block;
+
+            width: 100%;
+
+            background-color: green;
+
+            color: white;
+
+            padding: 12px;
+
+            text-decoration: none;
+
+            text-align: center;
+
+            border-radius: 5px;
+        }
+
+        .download-btn:hover {
+
+            background-color: darkgreen;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            Reconciliation Results
+        </h1>
+
+        <table>
+
+            <tr>
+                <th>Metric</th>
+                <th>Count</th>
+            </tr>
+
+            <tr>
+                <td>Source Records</td>
+                <td>{{ source_count }}</td>
+            </tr>
+
+            <tr>
+                <td>Target Records</td>
+                <td>{{ target_count }}</td>
+            </tr>
+
+            <!-- <tr>
+                <td>Matched</td>
+                <td>{{ matched }}</td>
+            </tr>
+
+            <tr>
+                <td>Mismatched</td>
+                <td>{{ mismatched }}</td>
+            </tr>
+
+            <tr>
+                <td>Missing</td>
+                <td>{{ missing }}</td>
+            </tr>
+
+            <tr>
+                <td>Additional</td>
+                <td>{{ additional }}</td>
+            </tr>
+
+            <tr>
+                <td>Duplicates</td>
+                <td>{{ duplicates }}</td>
+            </tr> -->
+            <tr>
+                <td>Matched</td>
+                <td id="matched">{{ matched }}</td>
+            </tr>
+
+            <tr>
+                <td>Mismatched</td>
+                <td id="mismatched">{{ mismatched }}</td>
+            </tr>
+
+            <tr>
+                <td>Missing</td>
+                <td id="missing">{{ missing }}</td>
+            </tr>
+
+            <tr>
+                <td>Additional</td>
+                <td id="additional">{{ additional }}</td>
+            </tr>
+
+            <tr>
+                <td>Duplicates</td>
+                <td id="duplicates">{{ duplicates }}</td>
+            </tr>
+
+        </table>
+
+        <a
+            href="/download"
+            class="download-btn">
+
+            Download Report
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

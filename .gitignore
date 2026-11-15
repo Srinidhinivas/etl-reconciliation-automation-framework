@@ -1,0 +1,67 @@
+# ---------------------------
+# Python
+# ---------------------------
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ---------------------------
+# Application Generated Files
+# ---------------------------
+
+logs/
+uploads/
+
+# Generated Reports
+
+Data/output/
+
+# ---------------------------
+# Playwright
+# ---------------------------
+
+Playwright-Framework/node_modules/
+
+Playwright-Framework/test-results/
+
+Playwright-Framework/playwright-report/
+
+Playwright-Framework/downloads/
+
+# Local screenshots/debug files
+
+*.png
+*.webm
+*.zip
+
+# ---------------------------
+# Root Node Files
+# ---------------------------
+
+node_modules/
+
+# ---------------------------
+# VS Code
+# ---------------------------
+
+.vscode/
+
+# ---------------------------
+# Operating System Files
+# ---------------------------
+
+.DS_Store
+
+Thumbs.db
+
+# ---------------------------
+# Environment Files
+# ---------------------------
+
+.env
+
+.venv/
+
+venv/
